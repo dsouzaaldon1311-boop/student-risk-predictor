@@ -1,6 +1,6 @@
 # 🎓 Student Academic Risk & Support System
 
-An interactive machine learning dashboard that predicts which students are at risk of dropping out, and explains *why* - built to support early intervention rather than just flag a number.
+An interactive machine learning dashboard that predicts whether a student falls into an at-risk category based on their academic and demographic data, and explains *why* - built to support early intervention rather than just flag a number.
 
 ![Dashboard screenshot](docs/dashboard-screenshot.png)
 **[🔗 Live Demo](https://student-risk-predictor-ycw7jidniikmrknwthhxje.streamlit.app/)**
