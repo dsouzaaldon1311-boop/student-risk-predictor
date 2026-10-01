@@ -4,7 +4,9 @@ import joblib
 import shap
 import matplotlib.pyplot as plt
 from mappings import decode_value
+import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # ─────────────────────────────────────────────
 # Page setup
 # ─────────────────────────────────────────────
@@ -23,7 +25,7 @@ def load_model_and_explainer():
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("../data/students_cleaned.csv")
+    df = pd.read_csv(os.path.join(BASE_DIR, "..", "data", "students_cleaned.csv"))
     return df
 
 rf, explainer = load_model_and_explainer()
@@ -102,4 +104,4 @@ st.caption("Positive impact = pushes risk UP. Negative impact = pushes risk DOWN
 # Global feature importance (reference)
 # ─────────────────────────────────────────────
 with st.expander("See overall model behavior (all students)"):
-    st.image("../data/shap_summary.png", caption="Global SHAP summary")
+    st.image(os.path.join(BASE_DIR, "..", "data", "shap_summary.png"), caption="Global SHAP summary")
