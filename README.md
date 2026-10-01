@@ -75,6 +75,6 @@ Realinho, V., Vieira Martins, M., Machado, J., & Baptista, L. (2021). *Predict S
 
 ## Limitations and Hopefully Future Work
 
--The dataset is from a Portuguese institution and may not generalize to other educational contexts without domain adaptation.
--SHAP explanations are useful for individual predictions but aggregating them for department-level policy requires additional validation.
--The current system predicts risk at the end of the second semester; earlier prediction with less data is an open question.
+- The dataset is from a Portuguese institution and may not generalize to other educational contexts without domain adaptation.
+- SHAP explanations are useful for individual predictions but aggregating them for department-level policy requires additional validation.
+- The current system predicts risk at the end of the second semester; earlier prediction with less data is an open question.
