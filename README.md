@@ -72,3 +72,9 @@ This was my first end-to-end ML project, built to strengthen my foundation ahead
 ## Dataset citation
 
 Realinho, V., Vieira Martins, M., Machado, J., & Baptista, L. (2021). *Predict Students' Dropout and Academic Success* [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5MC89
+
+## Limitations and Hopefully Future Work
+
+-The dataset is from a Portuguese institution and may not generalize to other educational contexts without domain adaptation.
+-SHAP explanations are useful for individual predictions but aggregating them for department-level policy requires additional validation.
+-The current system predicts risk at the end of the second semester; earlier prediction with less data is an open question.
