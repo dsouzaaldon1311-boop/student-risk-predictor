@@ -19,7 +19,7 @@ st.write("Identify students at risk of dropping out, and understand *why*.")
 # ─────────────────────────────────────────────
 @st.cache_resource
 def load_model_and_explainer():
-    rf = joblib.load("../models/model_rf.pkl")
+    rf = joblib.load(os.path.join(BASE_DIR, "..", "models", "model_rf.pkl"))
     explainer = shap.TreeExplainer(rf)
     return rf, explainer
 
