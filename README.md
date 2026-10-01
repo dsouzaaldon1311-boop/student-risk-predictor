@@ -1,13 +1,13 @@
 # 🎓 Student Academic Risk & Support System
 
-An interactive machine learning dashboard that predicts which students are at risk of dropping out, and explains *why* — built to support early intervention rather than just flag a number.
+An interactive machine learning dashboard that predicts which students are at risk of dropping out, and explains *why* - built to support early intervention rather than just flag a number.
 
 ![Dashboard screenshot](docs/dashboard-screenshot.png)
 **[🔗 Live Demo](https://student-risk-predictor-ycw7jidniikmrknwthhxje.streamlit.app/)**
 
 ## What this does
 
-Academic advisors often only learn a student is struggling after it's too late to help. This project predicts dropout risk using data available from the first two semesters, and — just as importantly — explains which specific factors are driving each student's risk score, so the explanation itself is useful for the advisor, not just the number.
+Academic advisors often only learn a student is struggling after it's too late to help. This project predicts dropout risk using data available from the first two semesters, and - just as importantly - explains which specific factors are driving each student's risk score, so the explanation itself is useful for the advisor, not just the number.
 
 ## Why it matters
 
@@ -16,25 +16,25 @@ A risk score with no explanation isn't actionable. This dashboard pairs a traine
 ## Features
 
 - **Live risk prediction** for any student in the dataset, via a Random Forest classifier
-- **Adjustable risk threshold** — see how the flagging decision changes as you trade off catching more at-risk students vs. reducing false alarms
-- **Per-student SHAP explanations** — the top factors driving each individual prediction
-- **Human-readable data** — raw categorical codes are decoded into real labels (e.g. Course `9147` → "Management") using the official UCI codebook
-- **Global feature importance** — a dataset-wide view of what drives risk in general
+- **Adjustable risk threshold** - see how the flagging decision changes as you trade off catching more at-risk students vs. reducing false alarms
+- **Per-student SHAP explanations** - the top factors driving each individual prediction
+- **Human-readable data** - raw categorical codes are decoded into real labels (e.g. Course `9147` → "Management") using the official UCI codebook
+- **Global feature importance** - a dataset-wide view of what drives risk in general
 
 ## Tech stack
 
-- **Python** — pandas, scikit-learn, SHAP, matplotlib
-- **Streamlit** — interactive web dashboard
+- **Python** - pandas, scikit-learn, SHAP, matplotlib
+- **Streamlit** - interactive web dashboard
 - **Dataset**: [UCI Predict Students' Dropout and Academic Success](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success) (4,424 students, 36 features, CC BY 4.0)
 
 ## How it works
 
-1. **Data cleaning** (`src/load_data.py`) — load the UCI dataset, reframe the 3-class target (Dropout / Enrolled / Graduate) into a binary "At Risk" classification
-2. **Exploratory analysis** (`src/eda.py`) — correlation analysis and grade distribution comparisons between at-risk and not-at-risk students
-3. **Model training** (`src/train_model.py`) — train and compare Logistic Regression and Random Forest classifiers, using `class_weight="balanced"` to handle the ~68/32 class imbalance
-4. **Threshold tuning** (`src/tune_threshold.py`) — since missing an at-risk student is costlier than a false alarm, the default 0.5 probability threshold was tuned to 0.35 to prioritize recall on the at-risk class
-5. **Explainability** (`src/explain_model.py`) — SHAP TreeExplainer generates both global and per-student explanations
-6. **Dashboard** (`src/app.py`) — Streamlit app tying it all together into an interactive tool
+1. **Data cleaning** (`src/load_data.py`) - load the UCI dataset, reframe the 3-class target (Dropout / Enrolled / Graduate) into a binary "At Risk" classification
+2. **Exploratory analysis** (`src/eda.py`) - correlation analysis and grade distribution comparisons between at-risk and not-at-risk students
+3. **Model training** (`src/train_model.py`) - train and compare Logistic Regression and Random Forest classifiers, using `class_weight="balanced"` to handle the ~68/32 class imbalance
+4. **Threshold tuning** (`src/tune_threshold.py`) - since missing an at-risk student is costlier than a false alarm, the default 0.5 probability threshold was tuned to 0.35 to prioritize recall on the at-risk class
+5. **Explainability** (`src/explain_model.py`) - SHAP TreeExplainer generates both global and per-student explanations
+6. **Dashboard** (`src/app.py`) - Streamlit app tying it all together into an interactive tool
 
 ## Model performance
 
