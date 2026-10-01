@@ -65,8 +65,8 @@ streamlit run app.py
 
 This was my first end-to-end ML project, built to strengthen my foundation ahead of pursuing an AI/ML master's. Key things I worked through:
 - Handling class imbalance properly, rather than chasing a misleadingly high accuracy score
-- The gap between a research paper's simplified documentation and the actual codes used in a published dataset — multiple fields required re-verifying the real category mappings directly against the source
-- Why model explainability matters in applied settings — a correct prediction without a reason isn't very useful to the person who has to act on it
+- The gap between a research paper's simplified documentation and the actual codes used in a published dataset - multiple fields required re-verifying the real category mappings directly against the source
+- Why model explainability matters in applied settings - a correct prediction without a reason isn't very useful to the person who has to act on it
 - Setting up a proper ML project structure with Git version control from early on, rather than retrofitting it later
 
 ## Dataset citation
