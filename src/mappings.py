@@ -8,14 +8,14 @@ MARITAL_STATUS = {
 
 APPLICATION_MODE = {
     1: "1st phase - general contingent", 2: "Ordinance No. 612/93",
-    3: "1st phase - special contingent (Azores)", 4: "Holders of other higher courses",
-    5: "Ordinance No. 854-B/99", 6: "International student (bachelor)",
-    7: "1st phase - special contingent (Madeira)", 8: "2nd phase - general contingent",
-    9: "3rd phase - general contingent", 10: "Ordinance 533-A/99, b2 (Different Plan)",
-    11: "Ordinance 533-A/99, b3 (Other Institution)", 12: "Over 23 years old",
-    13: "Transfer", 14: "Change in course", 15: "Technological specialization diploma",
-    16: "Change in institution/course", 17: "Short cycle diploma holders",
-    18: "Change in institution/course (International)"
+    5: "1st phase - special contingent (Azores)", 7: "Holders of other higher courses",
+    10: "Ordinance No. 854-B/99", 15: "International student (bachelor)",
+    16: "1st phase - special contingent (Madeira)", 17: "2nd phase - general contingent",
+    18: "3rd phase - general contingent", 26: "Ordinance 533-A/99, b2 (Different Plan)",
+    27: "Ordinance 533-A/99, b3 (Other Institution)", 39: "Over 23 years old",
+    42: "Transfer", 43: "Change of course", 44: "Technological specialization diploma",
+    51: "Change of institution/course", 53: "Short cycle diploma holders",
+    57: "Change of institution/course (International)"
 }
 
 COURSE = {
@@ -90,7 +90,7 @@ COLUMN_MAPPINGS = {
     "Marital status": MARITAL_STATUS,
     "Application mode": APPLICATION_MODE,
     "Course": COURSE,
-    "Previous qualification": PREVIOUS_QUALIFICATION,
+    "Previous qualification": PARENT_QUALIFICATION,
     "Mother's qualification": PARENT_QUALIFICATION,
     "Father's qualification": PARENT_QUALIFICATION,
     "Mother's occupation": PARENT_OCCUPATION,
