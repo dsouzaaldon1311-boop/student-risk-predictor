@@ -3,7 +3,7 @@
 An interactive machine learning dashboard that predicts which students are at risk of dropping out, and explains *why* — built to support early intervention rather than just flag a number.
 
 ![Dashboard screenshot](docs/dashboard-screenshot.png)
-**[🔗 Live Demo](https://your-app-url.streamlit.app)**
+**[🔗 Live Demo]([https://your-app-url.streamlit.app](https://student-risk-predictor-ycw7jidniikmrknwthhxje.streamlit.app/))**
 
 ## What this does
 
